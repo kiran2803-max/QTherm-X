@@ -1,0 +1,70 @@
+==================================================
+QTherm-X Quantum Test
+==================================================
+
+Quantum Output:
+tensor([-0.1818, -0.0251, -0.2729,  0.0263], grad_fn=<ToCopyBackward0>)
+
+Number of Qubits : 4
+
+Quantum Layer Working Successfully!
+
+(qthermx) C:\Users\user\Desktop\QTherm-X>python benchmark.py
+==================================================
+QTherm-X Benchmark
+==================================================
+Running on : cpu
+Training Points : torch.Size([5000, 2])
+
+Training Classical PINN...
+
+Classical PINN | Epoch 0/3000 | Loss = 8.384546e-01
+Classical PINN | Epoch 500/3000 | Loss = 2.221719e-02
+Classical PINN | Epoch 1000/3000 | Loss = 2.100524e-03
+Classical PINN | Epoch 1500/3000 | Loss = 5.814580e-04
+Classical PINN | Epoch 2000/3000 | Loss = 4.674458e-04
+Classical PINN | Epoch 2500/3000 | Loss = 6.733710e-04
+Done!
+
+Training Hybrid QAPINN (2 Qubits)...
+
+Hybrid QAPINN (2Q) | Epoch 0/3000 | Loss = 3.756981e-01
+Hybrid QAPINN (2Q) | Epoch 500/3000 | Loss = 1.519051e-01
+Hybrid QAPINN (2Q) | Epoch 1000/3000 | Loss = 1.247129e-01
+Hybrid QAPINN (2Q) | Epoch 1500/3000 | Loss = 1.024728e-01
+Hybrid QAPINN (2Q) | Epoch 2000/3000 | Loss = 7.719737e-02
+Hybrid QAPINN (2Q) | Epoch 2500/3000 | Loss = 7.078764e-02
+Done!
+
+Training Hybrid QAPINN (3 Qubits)...
+
+Hybrid QAPINN (3Q) | Epoch 0/3000 | Loss = 5.209951e-01
+Hybrid QAPINN (3Q) | Epoch 500/3000 | Loss = 1.647203e-01
+Hybrid QAPINN (3Q) | Epoch 1000/3000 | Loss = 1.125970e-01
+Hybrid QAPINN (3Q) | Epoch 1500/3000 | Loss = 9.238566e-02
+Hybrid QAPINN (3Q) | Epoch 2000/3000 | Loss = 8.902448e-02
+Hybrid QAPINN (3Q) | Epoch 2500/3000 | Loss = 9.090878e-02
+Done!
+
+Training Hybrid QAPINN (4 Qubits)...
+
+Hybrid QAPINN (4Q) | Epoch 0/3000 | Loss = 3.606607e-01
+Hybrid QAPINN (4Q) | Epoch 500/3000 | Loss = 1.406562e-01
+Hybrid QAPINN (4Q) | Epoch 1000/3000 | Loss = 1.130650e-01
+Hybrid QAPINN (4Q) | Epoch 1500/3000 | Loss = 1.100800e-01
+Hybrid QAPINN (4Q) | Epoch 2000/3000 | Loss = 9.650256e-02
+Hybrid QAPINN (4Q) | Epoch 2500/3000 | Loss = 9.230375e-02
+Done!
+
+========================================================================================================================
+QTHERM-X BENCHMARK RESULTS
+========================================================================================================================
+Model                    Qubits    PDE Loss       IC Loss        BC Loss        Total Loss     MAE            MSE            Rel L2
+------------------------------------------------------------------------------------------------------------------------
+Classical PINN           -         9.364209e-05   6.564875e-06   5.501462e-06   1.057084e-04   9.881754e-04   1.466596e-06   7.665674e-03
+Hybrid QAPINN (2Q)       2         1.293626e-02   2.728892e-02   1.983869e-02   6.006387e-02   4.360724e-02   4.046415e-03   4.026524e-01
+Hybrid QAPINN (3Q)       3         4.022810e-03   4.087001e-02   4.424551e-02   8.913833e-02   8.380380e-02   9.601547e-03   6.202484e-01
+Hybrid QAPINN (4Q)       4         5.329646e-03   5.053323e-02   3.105861e-02   8.692149e-02   8.263883e-02   9.396730e-03   6.135973e-01
+========================================================================================================================
+
+Benchmark saved to results/benchmark/results.csv
