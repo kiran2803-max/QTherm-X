@@ -1,91 +1,120 @@
 <p align="center">
 
-<img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" alt="Python">
-<img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch" alt="PyTorch">
-<img src="https://img.shields.io/badge/PennyLane-Quantum-purple" alt="PennyLane">
-<img src="https://img.shields.io/badge/Quantum-Hybrid-green" alt="Quantum Hybrid">
-<img src="https://img.shields.io/badge/PINN-Physics%20Informed-orange" alt="Physics-Informed Neural Network">
-<img src="https://img.shields.io/badge/Research-WISER%202026-success" alt="WISER 2026">
-<img src="https://img.shields.io/badge/License-MIT-blue" alt="MIT License">
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch)
+![PennyLane](https://img.shields.io/badge/PennyLane-Quantum-purple)
+![Quantum Computing](https://img.shields.io/badge/Quantum-Hybrid-green)
+![PINN](https://img.shields.io/badge/PINN-Physics%20Informed-orange)
+![Research](https://img.shields.io/badge/Research-WISER%202026-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+[![CI](https://github.com/kiran2803-max/QTherm-X/actions/workflows/ci.yml/badge.svg)](https://github.com/kiran2803-max/QTherm-X/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/kiran2803-max/QTherm-X/actions/workflows/codeql.yml/badge.svg)](https://github.com/kiran2803-max/QTherm-X/actions/workflows/codeql.yml)
+
+![Black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Linting](https://img.shields.io/badge/linting-flake8-yellow)
+![Security](https://img.shields.io/badge/security-CodeQL-blue)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/kiran2803-max/QTherm-X)
+![GitHub issues](https://img.shields.io/github/issues/kiran2803-max/QTherm-X)
 
 </p>
 
-<p align="center">
+# QTherm-X
 
-<img src="https://img.shields.io/github/stars/kiran2803-max/QTherm-X?style=social" alt="GitHub Stars">
-<img src="https://img.shields.io/github/forks/kiran2803-max/QTherm-X?style=social" alt="GitHub Forks">
-<img src="https://img.shields.io/github/last-commit/kiran2803-max/QTherm-X" alt="Last Commit">
-<img src="https://img.shields.io/github/issues/kiran2803-max/QTherm-X" alt="GitHub Issues">
+### Explainable Quantum-Assisted Physics-Informed Neural Networks for Thermal Physics
 
-</p>
+QTherm-X is a hybrid quantum-classical Physics-Informed Neural Network framework designed for solving thermal physics problems using **Variational Quantum Circuits (VQCs)** and classical neural networks.
 
-<h1 align="center">QTherm-X</h1>
+The project investigates the integration of **quantum feature extraction with physics-informed learning** for solving the one-dimensional heat equation and explores its potential application to aerospace thermal monitoring and predictive maintenance.
 
-<h3 align="center">
-Explainable Quantum-Assisted Physics-Informed Neural Networks for Thermal Physics
-</h3>
-
-<p align="center">
-A hybrid quantum-classical framework for solving thermal partial differential equations using Physics-Informed Neural Networks and Variational Quantum Circuits.
-</p>
-
-<p align="center">
-<b>BQP WISER Global Quantum + AI Summer Challenge 2026</b>
-</p>
+The framework combines **PennyLane** for quantum computation and **PyTorch** for classical deep learning and automatic differentiation.
 
 ---
 
-# 🔬 Overview
+## Project Overview
 
-**QTherm-X** is an Explainable Quantum-Assisted Physics-Informed Neural Network framework developed to investigate the integration of quantum computing with physics-informed machine learning for thermal physics.
+Traditional numerical approaches for solving thermal PDEs can become computationally expensive when dealing with complex physical systems.
 
-The framework combines a **Classical Physics-Informed Neural Network (PINN)** with a **Variational Quantum Circuit (VQC)** to solve the **one-dimensional transient heat equation** while enforcing physical constraints during model training.
+Physics-Informed Neural Networks address this problem by incorporating governing physical equations directly into the training objective.
 
-The quantum component is implemented using **PennyLane**, while the classical neural network and automatic differentiation pipeline are implemented using **PyTorch**.
+QTherm-X extends this concept by introducing a **quantum feature extraction layer** into the PINN architecture.
 
-The primary objective of QTherm-X is not to claim unconditional quantum advantage. Instead, the project investigates the feasibility of quantum feature extraction within physics-informed learning and evaluates its behaviour through controlled experiments.
-
----
-
-# 🎯 Research Objective
-
-The central research question investigated by QTherm-X is:
-
-> **Can quantum feature extraction be effectively integrated with Physics-Informed Neural Networks to model thermal systems while maintaining physical consistency?**
-
-To investigate this question, the project compares a conventional Classical PINN with Hybrid QAPINN configurations using different numbers of quantum qubits.
-
-The evaluated configurations include:
-
-* Classical PINN
-* Hybrid QAPINN — 2 Qubits
-* Hybrid QAPINN — 3 Qubits
-* Hybrid QAPINN — 4 Qubits
+The main objective is to investigate whether quantum-enhanced representations can provide a useful alternative to conventional neural-network representations for thermal PDE modelling.
 
 ---
 
-# 🚀 Key Features
+## Research Objective
 
-* 🧠 Physics-Informed Neural Network for thermal PDE modelling
-* ⚛️ Variational Quantum Circuit integration using PennyLane
-* 🔗 Hybrid quantum-classical architecture
-* 🔬 Automatic differentiation using PyTorch
-* 🌡️ One-dimensional transient heat equation modelling
-* 📊 Classical PINN vs QAPINN benchmarking
-* ⚙️ Multi-qubit experiments
-* 📈 PDE residual analysis
-* 📉 MSE, MAE and Relative $L_2$ evaluation
-* ⏱️ Training-time comparison
-* 🔢 Trainable-parameter comparison
-* 📊 Automated benchmark visualizations
-* 🔎 Explainable quantum feature extraction
-* 🧪 Reproducible experimental workflow
+The primary objective of QTherm-X is to develop and evaluate a hybrid quantum-classical PINN for thermal physics.
+
+The project focuses on:
+
+* Solving the one-dimensional heat equation.
+* Integrating Variational Quantum Circuits with PINNs.
+* Comparing Classical PINN and Hybrid QAPINN performance.
+* Evaluating different quantum circuit configurations.
+* Measuring PDE consistency and prediction accuracy.
+* Analysing model complexity and computational cost.
+* Exploring the potential application of the framework to aerospace thermal monitoring.
 
 ---
 
-# 🧮 Governing Physics
+## System Architecture
 
-QTherm-X solves the one-dimensional transient heat equation:
+The QTherm-X architecture follows a hybrid quantum-classical pipeline:
+
+```text
+                 Input
+                (x, t)
+                   │
+                   ▼
+        ┌─────────────────────┐
+        │   Quantum Layer     │
+        │                     │
+        │  Angle Embedding    │
+        │         │           │
+        │         ▼           │
+        │ Strongly Entangling │
+        │      Layers         │
+        │         │           │
+        │         ▼           │
+        │ Pauli-Z Expectation │
+        └──────────┬──────────┘
+                   │
+                   ▼
+          Quantum Feature Vector
+                   │
+                   ▼
+        ┌─────────────────────┐
+        │   Classical Neural  │
+        │      Network        │
+        │                     │
+        │ Linear → Tanh       │
+        │ Linear → Tanh       │
+        │ Linear → Output     │
+        └──────────┬──────────┘
+                   │
+                   ▼
+            Temperature
+              u(x,t)
+                   │
+                   ▼
+        ┌─────────────────────┐
+        │ Physics-Informed    │
+        │      Loss           │
+        │                     │
+        │ PDE + IC + BC       │
+        └─────────────────────┘
+```
+
+The quantum circuit acts as a trainable feature extractor, while the classical neural network produces the final temperature prediction.
+
+---
+
+## Physics Model
+
+QTherm-X uses the one-dimensional transient heat equation:
 
 $$
 \frac{\partial u}{\partial t}
@@ -98,21 +127,15 @@ $$
 where:
 
 * $u(x,t)$ represents temperature.
-* $x$ represents the spatial coordinate.
+* $x$ represents spatial position.
 * $t$ represents time.
 * $\alpha$ represents thermal diffusivity.
 
-The neural network is trained not only to minimize prediction error but also to satisfy the governing physical equation.
-
----
-
-# 🧠 Physics-Informed Learning
-
-The total physics-informed objective is composed of three major terms:
+The physics-informed objective combines the PDE residual with initial and boundary condition losses:
 
 $$
-\mathcal{L}_{total}
-===================
+\mathcal{L}
+===========
 
 \mathcal{L}*{PDE}
 +
@@ -121,341 +144,222 @@ $$
 \mathcal{L}_{BC}
 $$
 
-where:
-
-* $\mathcal{L}_{PDE}$ represents the PDE residual loss.
-* $\mathcal{L}_{IC}$ represents the initial-condition loss.
-* $\mathcal{L}_{BC}$ represents the boundary-condition loss.
-
-The PDE residual is calculated using automatic differentiation:
-
-$$
-r(x,t)
-======
-
-## \frac{\partial u}{\partial t}
-
-\alpha
-\frac{\partial^2u}{\partial x^2}
-$$
-
-The PDE loss is then calculated from the residual:
-
-$$
-\mathcal{L}_{PDE}
-=================
-
-\frac{1}{N}
-\sum_{i=1}^{N}
-r(x_i,t_i)^2
-$$
-
-This allows the neural network to learn a solution that respects the underlying thermal physics.
+This allows the model to learn a solution that satisfies the governing physical constraints.
 
 ---
 
-# ⚛️ Hybrid QAPINN Architecture
+## Quantum Model
 
-The proposed architecture follows:
+The quantum component uses a Variational Quantum Circuit implemented using PennyLane.
 
-```text
-                    Input
-                   (x, t)
-                     │
-                     ▼
-          ┌─────────────────────┐
-          │ Quantum Feature     │
-          │ Extraction Layer    │
-          │                     │
-          │ Angle Embedding     │
-          │        +            │
-          │ Variational Layers  │
-          └──────────┬──────────┘
-                     │
-                     ▼
-             Quantum Features
-          Pauli-Z Expectation
-                     │
-                     ▼
-          ┌─────────────────────┐
-          │ Classical Neural    │
-          │ Network             │
-          │                     │
-          │ Linear + Tanh       │
-          │ Linear + Tanh       │
-          │ Linear              │
-          └──────────┬──────────┘
-                     │
-                     ▼
-              Temperature
-                 u(x,t)
-                     │
-                     ▼
-          Automatic Differentiation
-                     │
-              ┌──────┴──────┐
-              ▼             ▼
-             u_t           u_xx
-              │             │
-              └──────┬──────┘
-                     ▼
-            Heat Equation Residual
-                     │
-                     ▼
-          Physics-Informed Loss
-                     │
-                     ▼
-               Optimization
-```
+### Quantum configuration
+
+| Component            | Configuration              |
+| -------------------- | -------------------------- |
+| Quantum framework    | PennyLane                  |
+| Quantum simulator    | `default.qubit`            |
+| Qubit configurations | 2, 3, 4                    |
+| Circuit depth        | 2 layers                   |
+| Encoding             | Angle Embedding            |
+| Variational circuit  | Strongly Entangling Layers |
+| Measurement          | Pauli-Z expectation        |
+| Classical framework  | PyTorch                    |
+
+The quantum circuit converts the spatial-temporal input $(x,t)$ into a quantum feature representation.
+
+These features are then passed to the classical neural network.
 
 ---
 
-# 🔄 Project Workflow
+## Experimental Setup
 
-```text
-              Thermal Physics Problem
-                       │
-                       ▼
-                Heat Equation
-                       │
-                       ▼
-             Training Point Sampling
-                       │
-             ┌─────────┴─────────┐
-             ▼                   ▼
-      Classical PINN       Hybrid QAPINN
-             │                   │
-             │             Quantum Circuit
-             │                   │
-             │             Feature Extraction
-             │                   │
-             │             Classical Layers
-             │                   │
-             └─────────┬─────────┘
-                       ▼
-             Physics-Informed Loss
-                       │
-                       ▼
-                 Model Training
-                       │
-                       ▼
-              Benchmark Evaluation
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-       PDE Loss       MSE          MAE
-          │            │            │
-          └────────────┼────────────┘
-                       ▼
-                 Relative L2
-                       │
-                       ▼
-              Training Time
-                       │
-                       ▼
-             Parameter Comparison
-                       │
-                       ▼
-               Final Analysis
-```
+The benchmark experiments compare:
+
+1. Classical PINN
+2. Hybrid QAPINN with 2 qubits
+3. Hybrid QAPINN with 3 qubits
+4. Hybrid QAPINN with 4 qubits
+
+The models were evaluated under controlled training conditions.
+
+### Training configuration
+
+| Parameter       |                     Value |
+| --------------- | ------------------------: |
+| Training points |                     5,000 |
+| Training epochs |                     3,000 |
+| Optimizer       |                      Adam |
+| Learning rate   |                     0.001 |
+| Quantum layers  |                         2 |
+| Execution       |                       CPU |
+| Quantum backend | PennyLane `default.qubit` |
 
 ---
 
-# ⚛️ Quantum Circuit
+## Benchmark Evaluation
 
-The quantum layer uses the spatial and temporal coordinates as inputs to the quantum circuit.
-
-The workflow is:
-
-```text
-(x, t)
-  │
-  ▼
-Angle Embedding
-  │
-  ▼
-Variational Quantum Layers
-  │
-  ▼
-Entanglement
-  │
-  ▼
-Pauli-Z Measurements
-  │
-  ▼
-Quantum Feature Vector
-  │
-  ▼
-Classical Neural Network
-  │
-  ▼
-Temperature Prediction
-```
-
-The expectation values obtained from Pauli-Z measurements form the quantum feature representation used by the downstream classical network.
-
----
-
-# 📊 Benchmark Configuration
-
-The benchmark was designed to compare the classical baseline with multiple quantum configurations.
-
-| Configuration  | Qubits | Epochs | Training Points |
-| -------------- | -----: | -----: | --------------: |
-| Classical PINN |      — |   3000 |            5000 |
-| Hybrid QAPINN  |      2 |   3000 |            5000 |
-| Hybrid QAPINN  |      3 |   3000 |            5000 |
-| Hybrid QAPINN  |      4 |   3000 |            5000 |
-
-### Common Training Configuration
-
-| Parameter              | Value           |
-| ---------------------- | --------------- |
-| Optimizer              | Adam            |
-| Learning Rate          | 0.001           |
-| Epochs                 | 3000            |
-| Training Points        | 5000            |
-| Quantum Circuit Layers | 2               |
-| Quantum Backend        | `default.qubit` |
-| Execution              | CPU             |
-
----
-
-# 📈 Evaluation Metrics
-
-The models are evaluated using multiple complementary metrics.
-
-### Total Loss
-
-Measures the combined physics-informed objective:
-
-$$
-\mathcal{L}_{total}
-===================
-
-\mathcal{L}*{PDE}
-+
-\mathcal{L}*{IC}
-+
-\mathcal{L}_{BC}
-$$
-
-### PDE Loss
-
-Measures how well the predicted solution satisfies the heat equation.
-
-### MSE
-
-$$
-MSE =
-\frac{1}{N}
-\sum_{i=1}^{N}
-(y_i-\hat{y}_i)^2
-$$
-
-### MAE
-
-$$
-MAE =
-\frac{1}{N}
-\sum_{i=1}^{N}
-|y_i-\hat{y}_i|
-$$
-
-### Relative $L_2$ Error
-
-$$
-L_2^{rel}
-=========
-
-\frac{
-|u-\hat{u}|_2
-}{
-|u|_2
-}
-$$
-
-### Computational Metrics
-
-The benchmark also evaluates:
-
-* Training time
-* Number of trainable parameters
-
----
-
-# 🧪 Experimental Results
-
-The benchmark experiments evaluate Classical PINN and Hybrid QAPINN configurations under the same overall experimental framework.
-
-The training logs demonstrate convergence of the investigated models over 3000 epochs.
-
-### Classical PINN
-
-```text
-Epoch 0       : 8.384546e-01
-Epoch 500     : 2.221719e-02
-Epoch 1000    : 2.100524e-03
-Epoch 1500    : 5.814580e-04
-Epoch 2000    : 4.674458e-04
-Epoch 2500    : 6.733710e-04
-```
-
-### Hybrid QAPINN — 2 Qubits
-
-```text
-Epoch 0       : 3.756981e-01
-Epoch 500     : 1.519051e-01
-Epoch 1000    : 1.247129e-01
-Epoch 1500    : 1.024728e-01
-Epoch 2000    : 7.719737e-02
-Epoch 2500    : 7.078764e-02
-```
-
-### Hybrid QAPINN — 3 Qubits
-
-```text
-Epoch 0       : 5.209951e-01
-Epoch 500     : 1.647203e-01
-Epoch 1000    : 1.125970e-01
-Epoch 1500    : 9.238566e-02
-Epoch 2000    : 8.902448e-02
-Epoch 2500    : 9.090878e-02
-```
-
-### Hybrid QAPINN — 4 Qubits
-
-```text
-Epoch 0       : 3.606607e-01
-Epoch 500     : 1.406562e-01
-Epoch 1000    : 1.130650e-01
-Epoch 1500    : 1.100800e-01
-Epoch 2000    : 9.650256e-02
-Epoch 2500    : 9.230375e-02
-```
-
-> **Note:** Detailed final benchmark metrics such as MAE, MSE, Relative $L_2$, training time, and parameter count are available in the generated experiment outputs and accompanying report. Only experimentally generated values should be reported in the final results table.
-
----
-
-# 📊 Benchmark Visualizations
-
-The repository contains visualizations for the experimental comparison, including:
+The models are evaluated using multiple metrics:
 
 * Total training loss
 * PDE residual loss
+* Initial condition loss
+* Boundary condition loss
+* Mean Absolute Error (MAE)
+* Mean Squared Error (MSE)
 * Relative $L_2$ error
-* MSE
-* MAE
 * Training time
-* Trainable parameters
-* Temperature field visualization
-* Thermal surface visualization
+* Number of trainable parameters
 
-Recommended output organization:
+This provides a broader evaluation than using training loss alone.
+
+---
+
+## Training Behaviour
+
+The recorded benchmark experiments show convergence for both the Classical PINN and Hybrid QAPINN configurations.
+
+The Classical PINN converged more rapidly, while the Hybrid QAPINN models demonstrated progressive reduction of the physics-informed loss during training.
+
+Example final-stage training losses:
+
+| Model          | Qubits |     Loss at 2500 epochs |
+| -------------- | -----: | ----------------------: |
+| Classical PINN |     -- | $6.733710\times10^{-4}$ |
+| Hybrid QAPINN  |      2 | $7.078764\times10^{-2}$ |
+| Hybrid QAPINN  |      3 | $9.090878\times10^{-2}$ |
+| Hybrid QAPINN  |      4 | $9.230375\times10^{-2}$ |
+
+These values are training-loss observations from the benchmark runs and are not presented as evidence of unconditional quantum advantage.
+
+---
+
+## Benchmark Results
+
+The repository contains the generated benchmark figures and experimental outputs.
+
+### Total Loss
+
+![Total Training Loss](figures/TotalLoss.png)
+
+### PDE Loss
+
+![PDE Residual Loss](figures/PDELoss.png)
+
+### Relative L2 Error
+
+![Relative L2 Error](figures/RelativeL2.png)
+
+### Mean Squared Error
+
+![Mean Squared Error](figures/MSE.png)
+
+### Mean Absolute Error
+
+![Mean Absolute Error](figures/MAE.png)
+
+### Training Time
+
+![Training Time](figures/TrainingTime.png)
+
+### Trainable Parameters
+
+![Trainable Parameters](figures/Parameters.png)
+
+> If your figures are stored under a different folder, update the paths above to match the repository structure.
+
+---
+
+## NASA C-MAPSS Validation
+
+QTherm-X also includes an aerospace-oriented validation component based on the **NASA C-MAPSS turbofan engine degradation dataset**.
+
+Two subsets are considered:
+
+* FD001
+* FD004
+
+### FD001
+
+FD001 represents a comparatively simpler degradation scenario with a single operating condition and fault mode.
+
+### FD004
+
+FD004 represents a more challenging scenario involving multiple operating conditions and degradation modes.
+
+The processed data are used to investigate:
+
+* Sensor behaviour
+* Thermal trends
+* Degradation patterns
+* Thermal health indicators
+* Remaining Useful Life (RUL)
+* Aerospace predictive-maintenance applications
+
+The NASA C-MAPSS component is intended as an application-oriented validation direction rather than replacing the controlled heat-equation benchmark.
+
+---
+
+## Project Workflow
 
 ```text
-outputs/
+Problem Definition
+        │
+        ▼
+One-Dimensional Heat Equation
+        │
+        ▼
+Training Point Generation
+        │
+        ▼
+Classical PINN Baseline
+        │
+        ▼
+Quantum Feature Extraction
+        │
+        ▼
+Hybrid QAPINN
+        │
+        ▼
+Physics-Informed Training
+        │
+        ▼
+Benchmark Evaluation
+        │
+        ├── PDE Loss
+        ├── IC Loss
+        ├── BC Loss
+        ├── MAE
+        ├── MSE
+        ├── Relative L2
+        ├── Training Time
+        └── Parameters
+        │
+        ▼
+Thermal Visualisation
+        │
+        ▼
+NASA C-MAPSS Application
+        │
+        ▼
+Aerospace Thermal Monitoring
+```
+
+---
+
+## Repository Structure
+
+```text
+QTherm-X/
+│
+├── benchmark.py
+├── model.py
+├── quantum_layer.py
+├── train.py
+├── losses.py
+├── evaluation.py
+│
+├── preprocessing/
+│   └── preprocess_nasa.py
 │
 ├── figures/
 │   ├── TotalLoss.png
@@ -464,100 +368,80 @@ outputs/
 │   ├── MSE.png
 │   ├── MAE.png
 │   ├── TrainingTime.png
-│   └── Parameters.png
-│
-├── metrics/
-├── models/
-└── logs/
-```
-
----
-
-# ✈️ Aerospace Application
-
-QTherm-X is motivated by thermal monitoring applications in engineering systems such as:
-
-* Aircraft engines
-* Marine propulsion systems
-* Industrial thermal systems
-* Energy systems
-* Thermal management systems
-
-The framework provides a foundation for future integration with real-world engineering datasets.
-
----
-
-# 🛩️ NASA C-MAPSS Validation Direction
-
-The project also considers the **NASA C-MAPSS turbofan engine degradation dataset** as an aerospace-oriented validation direction.
-
-The investigated subsets include:
-
-* **FD001**
-* **FD004**
-
-FD001 provides a comparatively simpler degradation scenario, while FD004 represents a more complex operating environment with multiple operating conditions and degradation patterns.
-
-Potential applications include:
-
-* Thermal health monitoring
-* Degradation analysis
-* Health-index estimation
-* Predictive maintenance
-* Remaining Useful Life (RUL) analysis
-
-The C-MAPSS component is intended to extend the thermal PDE modelling framework toward practical aerospace prognostics.
-
----
-
-# 🗂️ Repository Structure
-
-```text
-QTherm-X/
-│
-├── benchmark.py
-├── model.py
-├── quantum_layer.py
-├── pinn_losses.py
-│
-├── preprocessing/
-│   └── preprocess_nasa.py
+│   ├── Parameters.png
+│   ├── system_architecture.png
+│   ├── workflow.png
+│   └── quantum_circuit.png
 │
 ├── outputs/
-│   ├── figures/
-│   ├── metrics/
-│   ├── models/
-│   └── logs/
 │
 ├── report/
-│   ├── QTherm-X_Paper.pdf
-│   └── ...
-│
-├── presentation/
-│   ├── QTherm-X_Presentation.pdf
-│   └── ...
+│   └── QTherm-X_Research_Paper.pdf
 │
 ├── requirements.txt
+│
 └── README.md
 ```
 
 ---
 
-# 🛠️ Technology Stack
+## Technologies
 
-| Technology     | Purpose                                                |
-| -------------- | ------------------------------------------------------ |
-| **Python**     | Core implementation                                    |
-| **PyTorch**    | Classical neural network and automatic differentiation |
-| **PennyLane**  | Quantum circuit and hybrid quantum-classical learning  |
-| **NumPy**      | Numerical computation                                  |
-| **Matplotlib** | Visualization                                          |
-| **Git**        | Version control                                        |
-| **GitHub**     | Repository and collaboration                           |
+| Technology | Purpose                                                 |
+| ---------- | ------------------------------------------------------- |
+| Python     | Core implementation                                     |
+| PyTorch    | Classical neural networks and automatic differentiation |
+| PennyLane  | Quantum circuit implementation                          |
+| NumPy      | Numerical computation                                   |
+| Matplotlib | Scientific visualisation                                |
+| SciPy      | Numerical processing                                    |
+| Git        | Version control                                         |
+| GitHub     | Repository and reproducibility                          |
 
 ---
 
-# ⚙️ Installation
+## Development Environment
+
+The experiments were developed and executed using a CPU-based environment.
+
+The primary software stack consists of:
+
+```text
+Python
+PyTorch
+PennyLane
+NumPy
+Matplotlib
+SciPy
+Git
+GitHub
+```
+
+---
+
+## Team
+
+| Member                 | Role                                                                                                                                                |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A. Harikiran**       | Project Lead, QTherm-X Architecture, PINN/QAPINN Implementation, Quantum Circuit Integration, Benchmarking, Experimental Analysis and Documentation |
+| **A. Immanuel Prince** | Research Support, Literature Review, Thermal Physics Analysis and Project Documentation                                                             |
+| **R. Jeyaprasanna**    | Validation Support, Results Review, Visualization and Presentation/Submission Support                                                               |
+
+The project was developed collaboratively as part of the **WISER Global Quantum + AI Summer Program 2026 / BQP Challenge**.
+
+---
+
+## Research Paper
+
+The complete research paper is available below:
+
+### [Read the QTherm-X Research Paper (PDF)](report/QTherm-X_Research_Paper.pdf)
+
+The paper contains the complete methodology, mathematical formulation, experimental setup, benchmark results, NASA C-MAPSS application discussion, and conclusions.
+
+---
+
+## Reproducibility
 
 Clone the repository:
 
@@ -566,7 +450,7 @@ git clone https://github.com/kiran2803-max/QTherm-X.git
 cd QTherm-X
 ```
 
-Create and activate the project environment:
+Create the environment:
 
 ```bash
 conda create -n qthermx python=3.11
@@ -579,205 +463,140 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-# ▶️ Running the Benchmark
-
 Run the benchmark:
 
 ```bash
 python benchmark.py
 ```
 
-The benchmark evaluates:
-
-```text
-Classical PINN
-        ↓
-Hybrid QAPINN — 2 Qubits
-        ↓
-Hybrid QAPINN — 3 Qubits
-        ↓
-Hybrid QAPINN — 4 Qubits
-```
-
-The generated outputs can be stored in the `outputs/` directory.
+The benchmark evaluates the Classical PINN and multiple Hybrid QAPINN configurations.
 
 ---
 
-# 🔁 Reproducibility
+## Outputs
 
-The project is designed to provide a reproducible experimental workflow.
+The repository contains the generated experimental outputs, including:
 
-The repository contains:
+* Training loss curves
+* PDE loss plots
+* Relative $L_2$ error plots
+* MSE comparison
+* MAE comparison
+* Training-time comparison
+* Parameter comparison
+* Thermal visualizations
+* Model checkpoints
+* Benchmark data
 
-* Source code
-* Training configuration
-* Physics-informed loss implementation
-* Quantum circuit implementation
-* Benchmark scripts
-* Generated figures
-* Experimental outputs
-* Documentation
-* Research paper
-* Presentation
-
-Experiments use fixed training configurations and controlled model comparisons wherever applicable.
+These outputs support the results discussed in the accompanying research paper.
 
 ---
 
-# 👥 Team
+## Explainability
 
-## Authors
+QTherm-X is designed to make the contribution of each component observable.
 
-| Member                 | Role                                     | Responsibility                                                                                                                                                                                                                                             |
-| ---------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A. Harikiran**       | **Project & Technical Lead**             | Overall research direction, QTherm-X architecture, Classical PINN implementation, Hybrid QAPINN implementation, quantum circuit integration, training pipeline, benchmarking, metric evaluation, visualization, technical report, and project integration. |
-| **A. Immanuel Prince** | **Research & Validation Support**        | Research review, methodology review, benchmark observation review, validation support, and documentation review.                                                                                                                                           |
-| **R. Jeyaprasanna**    | **Documentation & Presentation Support** | Documentation review, presentation organization, visualization/result review, and final submission material support.                                                                                                                                       |
+The framework allows analysis of:
 
-### Contribution Structure
+* Classical versus quantum feature representations
+* Qubit-count effects
+* Quantum circuit depth
+* Physics-informed loss components
+* Prediction accuracy
+* Model complexity
+* Training cost
+* Thermal behaviour
 
-The project was organized around three complementary areas:
-
-**Technical Development**
-
-* PINN implementation
-* QAPINN implementation
-* Quantum circuit integration
-* Model training
-* Benchmarking
-* Metric evaluation
-
-**Research & Validation**
-
-* Literature review
-* Methodology review
-* Experimental validation
-* Result interpretation
-
-**Documentation & Communication**
-
-* Technical documentation
-* Figures
-* Presentation
-* Submission preparation
-
-The core technical implementation and experimental development were led by **A. Harikiran**.
+Rather than assuming that the introduction of quantum computing automatically improves performance, QTherm-X evaluates the hybrid architecture through controlled benchmarking.
 
 ---
 
-# 📄 Research Paper
+## Project Status
 
-The complete technical paper describing the QTherm-X methodology, mathematical formulation, architecture, experiments, results, and conclusions is available in the repository.
+### Completed
 
-**Paper:**
-`report/`
-
----
-
-# 🎤 Project Presentation
-
-The project presentation containing the research motivation, architecture, methodology, benchmark results, and conclusions is available in:
-
-**Presentation:**
-`presentation/`
-
----
-
-# 📚 References
-
-### Physics-Informed Neural Networks
-
-Raissi, M., Perdikaris, P., and Karniadakis, G. E.
-*Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.*
-Journal of Computational Physics, 2019.
-
-### Quantum Machine Learning
-
-Schuld, M., Sweke, R., and Meyer, J. J.
-*Effect of data encoding on the expressive power of variational quantum-machine-learning models.*
-Physical Review A, 2021.
-
-### PINN Optimization
-
-Wang, S., Teng, Y., and Perdikaris, P.
-*Understanding and mitigating gradient pathologies in physics-informed neural networks.*
-SIAM Journal on Scientific Computing, 2021.
-
-### NASA C-MAPSS
-
-NASA Prognostics Center of Excellence.
-*Commercial Modular Aero-Propulsion System Simulation (C-MAPSS) Dataset.*
+* [x] Classical PINN implementation
+* [x] Hybrid QAPINN implementation
+* [x] Variational Quantum Circuit integration
+* [x] 2-qubit experiment
+* [x] 3-qubit experiment
+* [x] 4-qubit experiment
+* [x] Benchmark evaluation
+* [x] Loss analysis
+* [x] MAE and MSE evaluation
+* [x] Relative $L_2$ evaluation
+* [x] Training-time analysis
+* [x] Parameter analysis
+* [x] Thermal visualisation
+* [x] NASA C-MAPSS preprocessing
+* [x] FD001 analysis
+* [x] FD004 analysis
+* [x] Research paper
+* [x] GitHub repository
 
 ---
 
-# 🤖 Generative AI Disclosure
+## Limitations
 
-Generative AI tools were used as supporting tools during the development of the project.
+The current implementation uses a classical quantum simulator rather than physical quantum hardware.
 
-They assisted with:
+Therefore, the reported quantum computation times represent simulation overhead and should not be interpreted as measurements of future fault-tolerant quantum hardware.
 
-* Brainstorming and research organization
-* Understanding technical concepts
-* Coding assistance and debugging
-* Documentation refinement
-* Research-paper language refinement
-* Presentation organization
+The current thermal PDE benchmark is one-dimensional, and the quantum circuit is evaluated using a limited number of qubits.
 
-Generative AI was **not used to fabricate experimental results or replace the experimental evaluation**. The implementation, model training, benchmark execution, generated outputs, and final technical decisions were performed and verified by the project team.
+These limitations motivate future investigation using larger circuits, higher-dimensional thermal PDEs, and real quantum devices.
 
 ---
 
-# 🏆 Project Context
-
-QTherm-X was developed as part of the **BQP WISER Global Quantum + AI Summer Challenge 2026**.
-
-The project investigates hybrid quantum-classical machine learning for scientific computing, with a particular focus on physics-informed learning for thermal systems.
-
-The research was conducted using CPU-based quantum simulation through PennyLane's `default.qubit` backend. The project emphasizes feasibility, reproducibility, controlled benchmarking, and future applicability rather than claiming immediate quantum advantage.
-
----
-
-# 🔮 Future Work
+## Future Work
 
 Future development will focus on:
 
-* Scaling to higher-dimensional thermal PDEs
-* Increasing quantum circuit depth and expressivity
-* Testing additional quantum encoding strategies
-* Evaluating larger qubit configurations
-* Running experiments on real quantum hardware
-* Improving computational efficiency
-* Integrating richer aerospace thermal datasets
-* Extending toward thermal digital twins
-* Exploring predictive maintenance applications
-* Investigating real-time thermal health monitoring
+* Higher-dimensional thermal PDEs
+* Larger quantum circuits
+* Real quantum hardware
+* Improved quantum encoding strategies
+* Thermal digital twins
+* Aerospace engine thermal monitoring
+* Advanced degradation modelling
+* Real-time predictive maintenance
+* Physics-informed aerospace prognostics
 
 ---
 
-# 📜 License
+## References
 
-This project is released under the **MIT License** for academic and research purposes.
+The primary references used in the project include:
+
+1. M. Raissi, P. Perdikaris, and G. E. Karniadakis, "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations," *Journal of Computational Physics*, vol. 378, pp. 686–707, 2019.
+
+2. M. Schuld, R. Sweke, and J. J. Meyer, "Effect of data encoding on the expressive power of variational quantum-machine-learning models," *Physical Review A*, vol. 103, no. 3, 032430, 2021.
+
+3. S. Wang, Y. Teng, and P. Perdikaris, "Understanding and mitigating gradient flow pathologies in physics-informed neural networks," *SIAM Journal on Scientific Computing*, vol. 43, no. 5, pp. A3055–A3081, 2021.
+
+4. N. Rahaman et al., "On the spectral bias of neural networks," *Proceedings of the 36th International Conference on Machine Learning*, 2019.
+
+5. NASA, "Prognostics Center of Excellence: C-MAPSS Turbofan Engine Degradation Simulation Dataset."
+
+6. PennyLane Documentation — quantum machine learning and differentiable quantum computing.
+
+7. PyTorch Documentation — deep learning and automatic differentiation.
 
 ---
 
-# 🙏 Acknowledgements
+## Acknowledgement
 
-This work was developed as part of the:
+This work was developed as part of the **WISER Global Quantum + AI Summer Program 2026 / BQP Challenge**, with a focus on exploring hybrid quantum-classical approaches for Physics-Informed Neural Networks and scientific computing.
 
-**BQP WISER Global Quantum + AI Summer Challenge 2026**
+---
 
-with a focus on hybrid quantum-classical machine learning, Physics-Informed Neural Networks, and scientific computing.
+## License
+
+This project is intended for academic and research purposes.
 
 ---
 
 <p align="center">
-
-<b>QTherm-X</b><br> <i>Explainable Quantum-Assisted Physics-Informed Neural Networks for Thermal Physics</i>
-
-</p>
-
-<p align="center">
-⭐ If you find this project useful, consider starring the repository.
+<b>QTherm-X</b><br>
+Explainable Quantum-Assisted Physics-Informed Neural Networks for Thermal Physics
 </p>
